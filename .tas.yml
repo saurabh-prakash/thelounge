@@ -3,9 +3,27 @@ framework: mocha
 postMerge:
   pattern:
     - "./test/commands/*.js"
+    - "./test/tests/build.js"
+    - "./test/tests/hexip.js"
+    - "./test/tests/hostmask.js"
+    - "./test/tests/passwords.js"
+    - "./test/tests/textLogFolder.js"
+    - "./test/src/helperTest.js"
+    - "./test/plugins/inputs/indexTest.js"
+    - "./test/models/msg.js"
+    - "./test/models/chan.js"
 preMerge:
   pattern:
     - "./test/commands/*.js"
+    - "./test/tests/build.js"
+    - "./test/tests/hexip.js"
+    - "./test/tests/hostmask.js"
+    - "./test/tests/passwords.js"
+    - "./test/tests/textLogFolder.js"
+    - "./test/src/helperTest.js"
+    - "./test/plugins/inputs/indexTest.js"
+    - "./test/models/msg.js"
+    - "./test/models/chan.js"
 preRun:
   command:
     - yarn install
