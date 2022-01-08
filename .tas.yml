@@ -1,5 +1,5 @@
 ---
-framework: "mocha"
+framework: mocha
 postMerge:
   pattern:
     - "test/**/*.js"
@@ -7,9 +7,11 @@ preMerge:
   pattern:
     - "test/**/*.js"
 preRun:
-  - yarn install
-  - NODE_ENV=production yarn build
+  command:
+    - yarn install
+    - NODE_ENV=production yarn build
 postRun:
-  - yarn --version
+  command:
+    - yarn --version
 configFile: "./test/.mocharc.yml"
-version: 2.1
+version: 1.0
