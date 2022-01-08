@@ -9,9 +9,9 @@ preMerge:
 preRun:
   command:
     - yarn install
-    - NODE_ENV=production yarn build
+    - yarn run build
 postRun:
   command:
     - yarn --version
-configFile: "./test/.mocharc.yml"
+configFile: "test/.mocharc.yml"
 version: 1.0
