@@ -1,9 +1,11 @@
 ---
 framework: mocha
 preRun:
+  env:
+    NODE_ENV: production
   command:
     - yarn install
-    - NODE_ENV=production yarn build
+    - yarn build
 preMerge:
   pattern:
     - "./test/commands/**/*.js"
