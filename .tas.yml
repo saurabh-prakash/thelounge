@@ -6,12 +6,12 @@ preRun:
     - NODE_ENV=production yarn build
 preMerge:
   pattern:
-    - "./test/**/*.js"
+    - "./test/*/{*.js,!(client)/**/*.js}"
 postMerge:
   pattern:
-    - "./test/**/*.js"
+    - "./test/*/{*.js,!(client)/**/*.js}"
 postRun:
   command:
     - yarn --version
-configFile: mocharc.yml
+configFile: test/.mocharc.yml
 version: 1.0
