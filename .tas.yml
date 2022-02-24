@@ -5,8 +5,6 @@ preRun:
     - yarn install
     - NODE_ENV=production yarn build
 preMerge:
-  env:
-    NODE_ENV: production
   pattern:
     - "./test/commands/**/*.js"
     - "./test/fixtures/**/*.js"
@@ -16,8 +14,6 @@ preMerge:
     - "./test/tests/**/*.js"
     - "./test/*.js"
 postMerge:
-  env:
-    NODE_ENV: production
   pattern:
     - "./test/commands/**/*.js"
     - "./test/fixtures/**/*.js"
