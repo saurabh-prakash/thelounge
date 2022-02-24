@@ -13,5 +13,5 @@ postMerge:
 postRun:
   command:
     - yarn --version
-configFile: test/.mocharc.yml
+configFile: mocharc.yml
 version: 1.0

@@ -1,0 +1,4 @@
+ignore:
+  - test/client/**
+require:
+  - test/fixtures/env
