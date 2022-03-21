@@ -3,25 +3,12 @@ framework: mocha
 preRun:
   command:
     - yarn install
-    - NODE_ENV=production yarn build
 preMerge:
   pattern:
-    - "./test/commands/**/*.js"
-    - "./test/fixtures/**/*.js"
-    - "./test/models/**/*.js"
-    - "./test/plugins/**/*.js"
-    - "./test/src/**/*.js"
-    - "./test/tests/**/*.js"
-    - "./test/*.js"
+    - "test/**/*.js"
 postMerge:
   pattern:
-    - "./test/commands/**/*.js"
-    - "./test/fixtures/**/*.js"
-    - "./test/models/**/*.js"
-    - "./test/plugins/**/*.js"
-    - "./test/src/**/*.js"
-    - "./test/tests/**/*.js"
-    - "./test/*.js"
+    - "test/**/*.js"
 postRun:
   command:
     - yarn --version
